@@ -1,0 +1,308 @@
+.main_container {
+  color: #FFFFFF;
+  display: grid;
+  gap: 15px;
+  padding: 0px 30px;
+  background-image: url(../assets/burger.png);
+  background-repeat: no-repeat;
+  background-position: 0px 10%;
+}
+.main_container__card {
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+  padding: 30px 40px 10px 40px;
+  width: 100hv;
+}
+.main_container__card--contrast {
+  background-color: #f71414;
+  background-image: url(../assets/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 75% 0px;
+}
+.main_container__card--dark {
+  background-color: #000000;
+}
+.main_container__card--light {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+.main_container__header {
+  display: flex;
+  align-items: center;
+}
+.main_container__avatar {
+  background-color: #FFFFFF;
+  border-radius: 50px;
+}
+.main_container__img {
+  width: 30px;
+  border-radius: 50px;
+}
+.main_container__user {
+  margin-left: 10px;
+  align-content: center;
+}
+.main_container__nick {
+  padding: 0px;
+  margin: 0px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.main_container__status {
+  padding: 0px;
+  margin: 0px;
+  font-size: 12px;
+}
+.main_container__tittle {
+  padding: 0px;
+  margin: 0px;
+  padding: 10px 0px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.main_container__description {
+  padding: 0px;
+  margin: 0px;
+  padding: 0px 0px 20px 0px;
+  font-size: 12px;
+  font-weight: lighter;
+  line-height: 16px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000000;
+  padding: 0px;
+  margin: 0px;
+  max-width: 1440px;
+  margin: 0px auto;
+}
+
+.header {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.header__button {
+  border: 1px solid #000000;
+  background-color: #FFFFFF;
+  border-radius: 100%;
+  width: 120px;
+  padding: 10px 0px;
+  font-weight: 800;
+  font-size: 11px;
+}
+
+.slogan {
+  margin: 0px 0px 70px 20px;
+  width: 220px;
+}
+.slogan__text {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 22px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 300px;
+  margin-top: 50px;
+}
+.footer__nav_list {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.footer__nav_list a {
+  text-decoration: none;
+}
+.footer__nav_item {
+  text-align: center;
+  margin: 5px 0px;
+}
+.footer__nav_item a {
+  color: #000000;
+  font-weight: bold;
+  font-size: 15px;
+}
+.footer__policy_list {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.footer__policy_list a {
+  text-decoration: none;
+}
+.footer__policy_item {
+  text-align: center;
+  margin: 5px 0px;
+}
+.footer__policy_item a {
+  color: grey;
+  font-weight: bold;
+  font-size: 11px;
+  letter-spacing: -1px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .slogan {
+    margin: 0px 0px 70px 20px;
+    width: 100%;
+  }
+  .slogan__text {
+    font-size: 70px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 55px;
+  }
+  .main_container {
+    grid-template-areas: "martina martina edu" "fede lucia lucia" "paula paula paula";
+    padding-left: 30px;
+    background-size: none;
+  }
+  .main_container__card--martina {
+    grid-area: martina;
+  }
+  .main_container__card--edu {
+    grid-area: edu;
+  }
+  .main_container__card--fede {
+    grid-area: fede;
+  }
+  .main_container__card--lucia {
+    grid-area: lucia;
+  }
+  .main_container__card--paula {
+    grid-area: paula;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 20px;
+    min-height: 150px;
+  }
+  .footer__nav_list {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    width: 35vh;
+    justify-content: space-around;
+  }
+  .footer__nav_list a {
+    text-decoration: none;
+  }
+  .footer__nav_item {
+    text-align: center;
+    margin: 5px 0px;
+  }
+  .footer__nav_item a {
+    color: #000000;
+    font-weight: 800;
+    font-size: 12px;
+  }
+  .footer__policy_list {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    width: 18vh;
+    justify-content: space-around;
+  }
+  .footer__policy_list a {
+    text-decoration: none;
+  }
+  .footer__policy_item {
+    text-align: center;
+    margin: 5px 0px;
+  }
+  .footer__policy_item a {
+    color: grey;
+    font-weight: bold;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 3440px) {
+  .slogan {
+    margin: 0px 0px 70px 20px;
+    width: 60%;
+  }
+  .slogan__text {
+    font-size: 70px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 55px;
+  }
+  .main_container {
+    grid-template-areas: "martina martina edu paula" "fede lucia lucia paula";
+    padding-left: 230px;
+    background-size: contain;
+  }
+  .main_container__card--martina {
+    grid-area: martina;
+  }
+  .main_container__card--edu {
+    grid-area: edu;
+  }
+  .main_container__card--fede {
+    grid-area: fede;
+  }
+  .main_container__card--lucia {
+    grid-area: lucia;
+  }
+  .main_container__card--paula {
+    grid-area: paula;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 20px;
+    min-height: 150px;
+  }
+  .footer__nav_list {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    width: 35vh;
+    justify-content: space-around;
+  }
+  .footer__nav_list a {
+    text-decoration: none;
+  }
+  .footer__nav_item {
+    text-align: center;
+    margin: 5px 0px;
+  }
+  .footer__nav_item a {
+    color: #000000;
+    font-weight: 800;
+    font-size: 12px;
+  }
+  .footer__policy_list {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    width: 18vh;
+    justify-content: space-around;
+  }
+  .footer__policy_list a {
+    text-decoration: none;
+  }
+  .footer__policy_item {
+    text-align: center;
+    margin: 5px 0px;
+  }
+  .footer__policy_item a {
+    color: grey;
+    font-weight: bold;
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=main.css.map */

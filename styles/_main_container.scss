@@ -1,0 +1,78 @@
+.main_container{
+    color: $color-light;
+    display: grid;
+    gap: 15px;
+    padding: 0px 30px;
+    background-image: url(../assets/burger.png);
+    background-repeat: no-repeat;
+    background-position: 0px 10%;
+
+    &__card{
+        border-radius: 20px;
+        box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+        padding: 30px 40px 10px 40px;
+        width: 100hv;
+
+        &--contrast{
+            background-color: $color-contrast;
+            background-image: url(../assets/bg-pattern-quotation.svg);
+            background-repeat: no-repeat;
+            background-position: 75% 0px;
+        }
+
+        &--dark{
+            background-color: $color-dark;
+        }
+
+        &--light{
+            background-color: $color-light;
+            color: $color-dark;
+        }
+    }
+
+    &__header{
+        display: flex;
+        align-items: center;
+    }
+
+    &__avatar{
+        background-color: $color-light;
+        border-radius: 50px;
+    }
+
+    &__img{
+        width: 30px;
+        border-radius: 50px;
+    }
+
+    &__user{
+        margin-left: 10px;
+        align-content: center;
+    }
+
+    &__nick{
+        @include spacing;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    &__status{
+        @include spacing;
+        font-size: 12px;
+    }
+
+    &__tittle{
+        @include spacing;
+        padding: 10px 0px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    &__description{
+        @include spacing;
+        padding: 0px 0px 20px 0px;
+        font-size: 12px;
+        font-weight: lighter;
+        line-height: 16px;
+    }
+}

@@ -1,0 +1,94 @@
+@import 'variables';
+@import 'mixins';
+@import 'main_container';
+
+body{
+    font-family: $fonts;
+    color: $color-dark;
+    @include spacing;
+    max-width: 1440px;
+    margin: 0px auto;
+}
+
+.header{
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+
+    &__button{
+        border: 1px solid $color-dark;
+        background-color: $color-light;
+        border-radius: 100%;
+        width: 120px;
+        padding: 10px 0px;
+        font-weight: 800;
+        font-size: 11px;
+    }
+}
+
+.slogan{
+    margin: 0px 0px 70px 20px;
+    width: 220px;
+
+    &__text{
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        line-height: 22px;
+    }
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 300px;
+    margin-top: 50px;
+
+    &__nav_list{
+        @include list_links;
+        @include spacing;
+    }
+
+    &__nav_item{
+        text-align: center;
+        a{
+            color: $color-dark;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        margin: 5px 0px;
+    }
+
+    &__policy_list{
+        @include list_links;
+        @include spacing;
+    }
+
+    &__policy_item{
+        text-align: center;
+        a{
+            color: $color-grey;
+            font-weight: bold;
+            font-size: 11px;
+            letter-spacing: -1px;
+        }
+        margin: 5px 0px;
+    }
+}
+
+
+@include media(768px, 1024px, 
+"martina martina edu"
+"fede lucia lucia"
+"paula paula paula",
+100%, 30px, none
+);
+
+@include media(1025px, 3440px, 
+"martina martina edu paula"
+"fede lucia lucia paula",
+60%, 230px, contain
+);
+

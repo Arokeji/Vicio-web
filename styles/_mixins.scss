@@ -1,0 +1,100 @@
+@mixin spacing{
+    padding: 0px;
+    margin: 0px;
+}
+
+@mixin list_links{
+    list-style: none;
+        a{
+            text-decoration: none;
+        }
+}
+
+@mixin media($minsize, $maxsize, $gridlayout, $sloganwidth, $containerpadding, $backgroundsize){
+    @media screen and (min-width: $minsize) and (max-width: $maxsize) {
+        .slogan{
+            margin: 0px 0px 70px 20px;
+            width: $sloganwidth;
+        
+            &__text{
+                font-size: 70px;
+                font-weight: 700;
+                letter-spacing: -1px;
+                line-height: 55px;
+            }
+        }
+        
+        .main_container{
+            grid-template-areas: $gridlayout;
+            padding-left: $containerpadding;
+            background-size: $backgroundsize;
+
+            &__card{
+                &--martina{
+                    grid-area: martina;
+                }
+        
+                &--edu{
+                    grid-area: edu;
+                }
+        
+                &--fede{
+                    grid-area: fede;
+                }
+        
+                &--lucia{
+                    grid-area: lucia;
+                }
+        
+                &--paula{
+                    grid-area: paula;
+                }
+            }
+        }
+    
+        .footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 10px 20px;
+        min-height: 150px;
+    
+        &__nav_list{
+            @include list_links;
+            @include spacing;
+            display: flex;
+            width: 35vh;
+            justify-content: space-around;
+        }
+    
+        &__nav_item{
+            text-align: center;
+            a{
+                color: $color-dark;
+                font-weight: 800;
+                font-size: 12px;
+            }
+            margin: 5px 0px;
+        }
+    
+        &__policy_list{
+            @include list_links;
+            @include spacing;
+            display: flex;
+            width: 18vh;
+            justify-content: space-around;
+        }
+    
+        &__policy_item{
+            text-align: center;
+            a{
+                color: $color-grey;
+                font-weight: bold;
+                font-size: 12px;
+            }
+            margin: 5px 0px;
+        }
+        }
+    }
+    
+}
